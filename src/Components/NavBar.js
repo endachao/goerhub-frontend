@@ -28,9 +28,8 @@ class NavBar extends React.Component {
                 </div>
                 <Menu mode="horizontal" onClick={this.redirectToUri} defaultSelectedKeys={[this.props.selected]}>
                     <Menu.Item key="home">
-                        <a href="/">社区</a>
+                        <Link to="/">社区</Link>
                     </Menu.Item>
-                    <Menu.Item key="2">排行</Menu.Item>
                     <Menu.Item key="3">课程</Menu.Item>
                     <Menu.Item key="4">wiki</Menu.Item>
                     <Menu.Item key="5">酷站</Menu.Item>

@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import HomeContainer from "./Containers/HomeContainer";
 import LoginContainer from "./Containers/LoginContainer";
+import RegisterContainer from "./Containers/RegisterContainer";
 
 class AppRouter extends React.Component {
     render() {
@@ -17,6 +18,9 @@ class AppRouter extends React.Component {
                 </Route>
                 <Route path="/login">
                     <LoginContainer/>
+                </Route>
+                <Route path="/register">
+                    <RegisterContainer/>
                 </Route>
             </Router>
         )

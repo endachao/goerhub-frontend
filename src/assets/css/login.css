@@ -1,0 +1,19 @@
+.loginPlan {
+    padding-top: 20px;
+    background-color: white;
+}
+
+.login-form-item {
+    margin-bottom: 30px;
+}
+
+.form-item-tips {
+    color: #c5c9ce;
+    font-size: .75rem;
+    margin-left: .75rem;
+}
+
+.form-item-input {
+    border-radius: .35rem;
+    height: 35px;
+}

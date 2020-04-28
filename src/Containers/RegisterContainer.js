@@ -7,20 +7,20 @@ import {Layout} from "antd";
 import AppFooter from "../Components/Footer";
 
 import {Row, Col, Card} from 'antd';
-import {Form, Input, Button, Checkbox} from 'antd';
+import {Form, Input, Button} from 'antd';
 import '../assets/css/login.css'
 
 const {Content} = Layout;
 
-class LoginContainer extends React.Component {
+class RegisterContainer extends React.Component {
     render() {
         return (
             <Layout>
-                <NavBar selected="login"/>
+                <NavBar selected="register"/>
                 <Content className="site-layout" style={{padding: '0 50px', marginTop: 64}}>
                     <Row style={{marginTop: '50px'}}>
                         <Col lg={{span: 8, offset: 8}} xs={{span: 24}} sm={{span: 10, offset: 7}} className="loginPlan">
-                            <Card title="登录" bordered={false}>
+                            <Card title="注册" bordered={false}>
                                 <Form
                                     wrapperCol={{lg: {span: 18, offset: 3}}}
                                     name="basic"
@@ -34,7 +34,20 @@ class LoginContainer extends React.Component {
                                         >
                                             <Input placeholder="Email" className="form-item-input"/>
                                         </Form.Item>
-                                        <span className="form-item-tips">仅支持邮箱登录</span>
+
+                                        <span className="form-item-tips">会发送邮件进行验证</span>
+                                    </Form.Item>
+
+                                    <Form.Item
+                                        className="login-form-item"
+                                    >
+                                        <Form.Item name="username" noStyle
+                                                   rules={[{required: true, message: '请输入用户名'}]}
+                                        >
+                                            <Input placeholder="用户名" className="form-item-input"/>
+                                        </Form.Item>
+
+                                        <span className="form-item-tips">支持中/英文、大小写字母与数字</span>
                                     </Form.Item>
 
                                     <Form.Item
@@ -52,7 +65,7 @@ class LoginContainer extends React.Component {
 
                                     <Form.Item wrapperCol={{offset: 6, span: 12}}>
                                         <Button type="primary" htmlType="login" block>
-                                            登录
+                                            注册
                                         </Button>
                                     </Form.Item>
                                 </Form>
@@ -66,4 +79,4 @@ class LoginContainer extends React.Component {
     }
 }
 
-export default LoginContainer
+export default RegisterContainer
